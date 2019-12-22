@@ -1,6 +1,6 @@
 # Canvas 前端水印
 
-### 使用方法
+### How To Use
 
 ```js
 watermark.init({
@@ -8,7 +8,7 @@ watermark.init({
 });
 ```
 
-### 参数
+### Options
 
 - container 容器, defalut:document.body
 - width canvas 宽度, defalut:"240px"
@@ -23,3 +23,7 @@ watermark.init({
 - rotate 旋转角度, defalut:"30"
 - zIndex z-index 数值
 - observe 使用 MutationObserver 检测 dom 被修改时重新绘制水印, defalut:true
+
+### License
+
+MIT

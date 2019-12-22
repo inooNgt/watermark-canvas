@@ -1,0 +1,26 @@
+{
+  "name": "watermark-canvas",
+  "version": "1.0.0",
+  "description": "canvas watermark",
+  "main": "src/watermark-canvas.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inooNgt/watermark-canvas.git"
+  },
+  "keywords": [
+    "watermark",
+    "canvas"
+  ],
+  "author": "inooNgt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inooNgt/watermark-canvas/issues"
+  },
+  "homepage": "https://github.com/inooNgt/watermark-canvas#readme"
+}
