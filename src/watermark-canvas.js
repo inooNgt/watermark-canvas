@@ -44,9 +44,7 @@
 
       let dataurl = canvas.toDataURL();
       let watermarkElem = document.createElement("div");
-      watermarkElem.setAttribute(
-        "style",
-        `position:absolute;
+      const styles = `position:absolute;
       top:0;
       left:0;
       width:100%;
@@ -56,8 +54,12 @@
       };
       pointer-events:none;
       background-repeat:repeat;
-      background-image:url('${dataurl}')`
-      );
+      background-image:url('${dataurl}');`;
+      watermarkElem.setAttribute("style", styles);
+
+      // IE 10 pointer-event 兼容性
+      watermarkElem.onclick = handlePointerEvent;
+
       clear();
       options.container.appendChild(watermarkElem);
       wm.instances.push(watermarkElem);
@@ -65,6 +67,14 @@
       if (options.observe) {
         observe(options);
       }
+    }
+
+    function handlePointerEvent(e) {
+      watermarkElem.setAttribute("style", `display:none;${styles}`);
+      let bottomElement = document.elementFromPoint(e.clientX, e.clientY);
+      console.log("bottomElement:", bottomElement);
+      watermarkElem.setAttribute("style", `${styles}`);
+      bottomElement.click();
     }
 
     /**
